@@ -1,0 +1,126 @@
+
+-----------------------------------------------------------------------------------------------
+Sum of 2 nums
+
+
+using System;
+
+namespace MyApplication
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      int x = 5;
+      int y = 6;
+      int sum = x + y;
+      Console.WriteLine(sum); // Print the sum of x + y
+    }
+  }
+}
+
+------------------------------------------------------------------------------------------------
+Print the odd numbers from 1 to 99
+
+
+using System;  
+public class Exercise25
+{  
+    public static void Main() 
+      {     
+          Console.WriteLine("Odd numbers from 1 to 99. Prints one number per line.");
+          for (int n = 1; n < (99 + 1); n++)
+            {
+                if (n % 2 != 0)
+                {
+                    Console.WriteLine(n.ToString());
+                }
+            }
+                    
+    }
+}
+
+---------------------------------------------------------------------------------------------------
+
+check two given numbers where one is less than 100 and other is greater than 200
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+public class Exercise35 {
+  static void Main(string[] args)
+        {
+            Console.Write("Input a first number(<100): ");
+            int m = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Input a second number(>200): ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine((m < 100 && n > 200));
+        }
+}
+
+
+----------------------------------------------------------------------------------------------------------
+
+find the sum of first 10 natural numbers
+
+
+
+using System;  
+public class Exercise2  
+{  
+    public static void Main() 
+{
+    int  j, sum = 0;
+
+	Console.Write("\n\n");
+    Console.Write("Find the sum of first 10 natural numbers:\n");
+    Console.Write("----------------------------------------------");
+    Console.Write("\n\n");
+	
+    Console.Write("The first 10 natural number are :\n");
+     for (j = 1; j <= 10; j++)
+    {
+        sum = sum + j;
+        Console.Write("{0} ",j);    
+    }
+    Console.Write("\nThe Sum is : {0}\n", sum);
+  }
+}
+
+
+--------------------------------------------------------------------------------------------------------------
+
+display the multiplication table of a given integer
+
+using System;  
+public class Exercise6  
+{  
+    public static void Main() 
+{
+   int j,n;
+   
+	Console.Write("\n\n");
+    Console.Write("Display the multiplication table:\n");
+    Console.Write("-----------------------------------");
+    Console.Write("\n\n");   
+
+   Console.Write("Input the number (Table to be calculated) : ");
+   n= Convert.ToInt32(Console.ReadLine());   
+   Console.Write("\n");
+   for(j=1;j<=10;j++)
+   {
+     Console.Write("{0} X {1} = {2} \n",n,j,n*j);
+   }
+  }
+}
+
+
+---------------------------------------------------------------------------------------------------------------
+
+
+
+

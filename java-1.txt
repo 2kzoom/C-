@@ -1,0 +1,138 @@
+
+Add 2 nums with user input
+------------------------------------------------------------------------------
+
+import java.util.Scanner;  // Import the Scanner class
+
+public class MyClass {
+  public static void main(String[] args) {
+    int x, y, sum;
+    Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+    System.out.println("Type a number:");
+    x = myObj.nextInt(); // Read user input
+
+    System.out.println("Type another number:");
+    y = myObj.nextInt(); // Read user input
+
+    sum = x + y;
+    System.out.println("Sum is: " + sum); // Output user input
+  }
+} 
+
+------------------------------------------------------------------------------------------------
+Avg value of array elements
+
+
+
+public class Exercise {
+public static void main(String[] args) {   
+ 
+       int[] numbers = new int[]{20, 30, 25, 35, -16, 60, -100};
+       //calculate sum of all array elements
+       int sum = 0;
+       for(int i=0; i < numbers.length ; i++)
+        sum = sum + numbers[i];
+       //calculate average value
+        double average = sum / numbers.length;
+        System.out.println("Average value of the array elements is : " + average); 
+   }
+}
+
+---------------------------------------------------------------------------------------------------
+find the numbers greater than the average of the numbers of a given array
+
+
+
+import java.util.*;
+public class Solution {
+  public static void main(String[] args) 
+    {
+      Integer nums[] = new Integer[]{1, 4, 17, 7, 25, 3, 100};
+      int sum = 0;
+	  System.out.println("Original Array: ");
+	  System.out.println(Arrays.toString(nums));
+	  for(int i = 0; i < nums.length; i++) {      
+      sum = sum + nums[i];
+    }
+      double average = sum / nums.length;
+      System.out.println("The average of the said array is: " + average);
+      System.out.println("The numbers in the said array that are greater than the average are: ");
+      for(int i = 0; i < nums.length; i++) {
+      if(nums[i] > average) {
+        System.out.println(nums[i]);
+      }
+    }
+	}
+}
+
+-------------------------------------------------------------------------------------------------------
+convert a decimal number to octal number
+
+
+
+import java.util.Scanner;
+public class Exercise21 {
+      public static void main(String args[])
+    {
+            int dec_num, rem, quot, i=1, j;
+        int oct_num[] = new int[100];
+        Scanner scan = new Scanner(System.in);
+		
+        System.out.print("Input a Decimal Number: ");
+        dec_num = scan.nextInt();
+		
+        quot = dec_num;
+		
+        while(quot != 0)
+        {
+            oct_num[i++] = quot%8;
+            quot = quot/8;
+        }
+		
+        System.out.print("Octal number is: ");
+        for(j=i-1; j>0; j--)
+        {
+            System.out.print(oct_num[j]);
+        }
+		System.out.print("\n");
+    }
+}
+
+--------------------------------------------------------------------------------------------------------
+get the number of element in a given array of integers that are smaller than the integer of another given array of integers
+
+
+
+import java.util.ArrayList;
+import java.util.Arrays;
+public class Solution {
+ public static void main(String[] args) {
+ int[] main_arra = {1, 2, 3, 4, 5, 6, 7, 8};
+		int[]query_arra = {1, 4, 8};
+  ArrayList < Integer > result = count_smaller_number(main_arra, query_arra);
+  for (int i = 0; i < result.size(); i++) {
+   System.out.println(result.get(i));
+  }
+ }
+ public static ArrayList < Integer > count_smaller_number(int[] main_arra, int[] query_arra) {
+  ArrayList < Integer > result = new ArrayList < > ();
+  Arrays.sort(main_arra);
+  for (int i = 0; i < query_arra.length; i++) {
+   result.add(temp(main_arra, query_arra[i]));
+  }
+  return result;
+ }
+ private static int temp(int[] main_arra, int num) {
+  int ctr = 0;
+  for (int i = 0; i < main_arra.length; i++) {
+   if (main_arra[i] < num) {
+    ctr++;
+   } else {
+    break;
+   }
+  }
+  return ctr;
+ }
+}
+
+--------------------------------------------------------------------------------------------------------------------
